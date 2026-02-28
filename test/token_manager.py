@@ -27,7 +27,7 @@ class GigaChatTokenManager:
                 with open(self.token_file, 'r') as f:
                     data = json.load(f)
 
-                expires_at = datetime.fromisoformat(data['expires_at'])
+                expires_at = datetime.fromtimestamp(data['expires_at'] / 1000.0)
                 if expires_at > datetime.now() + timedelta(minutes=5):
                     self.access_token = data['access_token']
                     self.expires_at = expires_at
@@ -41,7 +41,7 @@ class GigaChatTokenManager:
         """Сохраняет токен в файл"""
         try:
             expires_in = token_data.get('expires_in', 1800)
-            expires_at = datetime.now() + timedelta(seconds=expires_in - 300)
+            expires_at = datetime.now() + timedelta(seconds=expires_in - 300)  # минус 5 минут для запаса
 
             data = {
                 'access_token': token_data['access_token'],

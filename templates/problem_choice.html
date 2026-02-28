@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <main>
+    <div class="hero" style="max-width: 700px;">
+      <h2 style="font-size: 36px; margin-bottom: 20px;">Какие триггеры к перееданию есть у Вас?</h2>
+      <form id="triggerForm">
+        <div class="options">
+          <label class="option-card" data-value="1">
+            <input type="radio" name="trigger" value="1" hidden>
+            <span class="option-title">Эмоции.</span> Чувствую грусть, тревогу, одиночество.
+          </label>
+          <label class="option-card" data-value="2">
+            <input type="radio" name="trigger" value="2" hidden>
+            <span class="option-title">Ситуация.</span> Стресс на работе, увидел/а вкусную еду.
+          </label>
+          <label class="option-card" data-value="3">
+            <input type="radio" name="trigger" value="3" hidden>
+            <span class="option-title">Мысль.</span> "Заслужил/а вкусно поесть."
+          </label>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="submitTrigger" style="margin-top: 16px;">
+          <i class="fas fa-paper-plane"></i> Отправить
+        </button>
+      </form>
+
+      <p class="disclaimer">
+        Your Canva profile name will be shared.
+        <a href="#">Learn how we handle your data</a>
+      </p>
+    </div>
+  </main>
+
+{% endblock %}

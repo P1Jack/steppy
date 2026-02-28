@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steppy — контроль переедания</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../static/styles/index.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo" aria-label="На главную">
+      <i class="fas fa-shoe-prints logo-icon"></i>
+      <span class="logo-text">Steppy</span>
+    </a>
+    <div class="profile" id="profileWidget">
+      <span class="profile-name">Курт К.</span>
+      <div class="profile-avatar" id="avatarBtn" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <button class="dropdown-item"><i class="fas fa-id-card"></i> Мой профиль</button>
+        <button class="dropdown-item"><i class="fas fa-cog"></i> Настройки</button>
+        <div class="dropdown-divider"></div>
+        <button class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Выйти</button>
+      </div>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4><i class="fas fa-shoe-prints" style="margin-right: 8px;"></i>Steppy</h4>
+        <p>Ваш персональный AI-помощник для здорового пищевого поведения. 24/7 поддержка и научный подход.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Как это работает</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Правовая информация</h4>
+        <ul>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Условия использования</a></li>
+          <li><a href="#">Публичная оферта</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Свяжитесь с нами</h4>
+        <p><i class="fas fa-envelope"></i> tech@steppy.ai</p>
+        <p><i class="fas fa-phone-alt"></i> +7 (800) 555-35-35</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-vk"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Steppy. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="../static/scripts/script.js"></script>
+</body>
+</html>

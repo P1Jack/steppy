@@ -62,24 +62,11 @@ def before_request():
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html',
-                           session_id=session.get('session_id'))
-
-
-@app.route('/problem', methods=['GET'])
-def problem():
-    return render_template('problem_choice.html',
-                           session_id=session.get('session_id'),
-                           token_status=token_manager is not None)
-
-
-@app.route('/chat', methods=['GET'])
-def chat():
     if 'chat_history' not in session:
         session['chat_history'] = []
         session['session_id'] = str(uuid.uuid4())
 
-    return render_template('chat.html',
+    return render_template('index.html',
                            chat_history=session['chat_history'],
                            session_id=session.get('session_id'),
                            token_status=token_manager is not None)
