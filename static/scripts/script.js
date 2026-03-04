@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (learnBtn) {
     learnBtn.addEventListener('click', () => {
-      window.location.href='/chat'
+      window.location.href='/learnMore'
     });
   }
 
